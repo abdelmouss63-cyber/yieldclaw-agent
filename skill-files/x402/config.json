@@ -1,0 +1,34 @@
+{
+  "network": "arc-testnet",
+  "chainId": 5042002,
+  "paymentToken": "0x3600000000000000000000000000000000000000",
+  "paymentTokenSymbol": "USDC",
+  "paymentTokenDecimals": 6,
+  "facilitator": "self",
+  "endpoints": {
+    "/yield/apy": {
+      "price": "1000",
+      "description": "Current vault APY"
+    },
+    "/yield/tvl": {
+      "price": "1000",
+      "description": "Total value locked"
+    },
+    "/yield/balance/:address": {
+      "price": "2000",
+      "description": "Address balance lookup"
+    },
+    "/yield/stats": {
+      "price": "3000",
+      "description": "Full protocol statistics"
+    },
+    "/yield/report": {
+      "price": "5000",
+      "description": "Complete yield report"
+    },
+    "/yield/stream/:id": {
+      "price": "2000",
+      "description": "Payment stream info"
+    }
+  }
+}

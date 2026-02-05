@@ -1,0 +1,28 @@
+{
+  "name": "yieldclaw",
+  "version": "1.0.0",
+  "description": "Autonomous DeFi yield agent for USYC/Hashnote on Arc Network. Provides real-time yield data, vault analytics, and payment stream monitoring via OpenClaw skill.",
+  "homepage": "https://github.com/yieldclaw/yieldclaw",
+  "keywords": [
+    "openclaw",
+    "moltbook",
+    "defi",
+    "yield",
+    "usyc",
+    "arc-network",
+    "x402",
+    "agentic-commerce"
+  ],
+  "license": "MIT",
+  "author": "YieldClaw",
+  "scripts": {
+    "start": "node x402/server.js",
+    "register": "bash agent/register.sh",
+    "report": "bash scripts/yield-report.sh",
+    "query": "bash scripts/yield-query.sh"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "ethers": "^6.9.0"
+  }
+}

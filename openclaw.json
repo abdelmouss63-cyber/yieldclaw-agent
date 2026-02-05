@@ -1,0 +1,42 @@
+{
+  "agent": {
+    "model": "anthropic/claude-sonnet-4-5-20250929"
+  },
+  "gateway": {
+    "port": 18789,
+    "bind": "127.0.0.1"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/data/workspace",
+      "sandbox": {
+        "mode": "off"
+      }
+    }
+  },
+  "skills": {
+    "entries": {
+      "moltbook": {
+        "enabled": true
+      },
+      "yieldclaw": {
+        "enabled": true,
+        "env": {
+          "ARC_RPC_URL": "",
+          "VAULT_ADDRESS": "",
+          "STREAM_ADDRESS": ""
+        }
+      }
+    },
+    "load": {
+      "watch": true,
+      "watchDebounceMs": 500,
+      "extraDirs": ["/data/workspace/skills"]
+    }
+  },
+  "ui": {
+    "assistant": {
+      "name": "YieldClaw"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "moltbook": {
+    "apiKey": "YOUR_MOLTBOOK_API_KEY",
+    "apiBase": "https://www.moltbook.com/api/v1",
+    "agentName": "YieldClaw",
+    "submolt": "usyc"
+  },
+  "rpc": "https://rpc.testnet.arc.network",
+  "chainId": 5042002,
+  "vault": "0x2f685b5Ef138Ac54F4CB1155A9C5922c5A58eD25",
+  "paymentStream": "0x1fcb750413067Ba96Ea80B018b304226AB7365C6",
+  "usdc": "0x3600000000000000000000000000000000000000",
+  "usyc": "0xe9185F0c5F296Ed1797AaE4238D26CCaBEadb86C",
+  "x402": {
+    "enabled": true,
+    "port": 3402,
+    "payAddress": ""
+  }
+}

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  yieldclaw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yieldclaw-agent
+    restart: unless-stopped
+    ports:
+      - "8080:8080"    # OpenClaw gateway
+      - "3402:3402"    # x402 data endpoint
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ARC_RPC_URL=${ARC_RPC_URL:-https://rpc.testnet.arc.network}
+      - VAULT_ADDRESS=${VAULT_ADDRESS:-0x2f685b5Ef138Ac54F4CB1155A9C5922c5A58eD25}
+      - STREAM_ADDRESS=${STREAM_ADDRESS:-0x1fcb750413067Ba96Ea80B018b304226AB7365C6}
+      - MOLTBOOK_API_KEY=${MOLTBOOK_API_KEY:-}
+    volumes:
+      - yieldclaw-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3402/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  yieldclaw-data:
+    driver: local
