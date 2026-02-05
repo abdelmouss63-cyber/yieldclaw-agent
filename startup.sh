@@ -118,6 +118,8 @@ else
 fi
 
 # ─── Start OpenClaw agent ────────────────────────────────────────────────────
+export NODE_OPTIONS="--max-old-space-size=512"
+
 log "Starting OpenClaw agent..."
 log "Workspace: ${OPENCLAW_WORKSPACE_DIR}"
 log "State dir: ${OPENCLAW_STATE_DIR}"

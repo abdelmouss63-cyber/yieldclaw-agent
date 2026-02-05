@@ -1,13 +1,13 @@
 {
-  "agent": {
-    "model": "anthropic/claude-sonnet-4-5-20250929"
-  },
   "gateway": {
     "port": 18789,
     "bind": "127.0.0.1"
   },
   "agents": {
     "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-5-20250929"
+      },
       "workspace": "/data/workspace",
       "sandbox": {
         "mode": "off"
